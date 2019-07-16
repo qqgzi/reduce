@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+    //这里用reduce的方法将二维数组转化为一维数组
+    var arr = [
+        [1,2,3],
+        [3,4],
+        [4,5],
+        [6,7]
+    ];
+    let newArr = arr.reduce(function(a,b){
+        let arrcurrent = a.concat(b);
+        console.log(arrcurrent);
+        return a.concat(b);
+        //console.log(a.concat(b));
+    },[])
+    console.log(newArr);
+
+</script>
+</html>

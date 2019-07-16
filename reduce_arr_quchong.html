@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+    var number = [1,2,2,2,5,10,2,3];
+    var arr = number.sort().reduce(function(newNumber,current){
+        if(newNumber.length - 1 !==current){
+            console.log(`${newNumber}-->${current}`);
+            newNumber.push(current);
+        }
+        return newNumber;
+    },[])
+    console.log(arr);
+</script>
+</html>

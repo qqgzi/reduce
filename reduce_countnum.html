@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    var str = ['wang','zhang','li','wang'];
+    var strCount = str.reduce(function(arrtmp,name){
+       if(name in arrtmp){
+           arrtmp[name]++;
+       }else{
+           arrtmp[name] = 1;
+       }
+        console.log(arrtmp);
+       return arrtmp;
+    },{});
+    console.log(strCount);
+</script>
+</body>
+</html>

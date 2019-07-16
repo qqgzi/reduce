@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+    var arr = [1,2,3,4,5];
+    //reduce的参数是（function函数，开始计算的数值,），
+    // 如果第二个参数赋值，则数组从索引下标为0开始进行计算，自动将reduce的第二个参数作为第一个valuecurrent
+    //如果第二个参数不赋值，数组下标的当前值从1开始计算
+
+    //详解function函数的变量值（当前的总和，当前计算的数值，当 前计算的数值的下标，正在调用reduce的数组）
+     arr.reduce(function(accsum,valuecurrent,indexcurrent,arr){//数组调用reduce方法本身就进行了从索引下标为1开始的遍历。
+        console.log(`${accsum}-->${valuecurrent}-->${indexcurrent}-->${arr}`);
+
+        //return accsum+valuecurrent;//着一步相当于是将之前一步的accsum值复制给新的accsum
+    });
+    //console.log(result);//这里相当于做了最后的一次sum = accsum + currentvalue
+</script>
+</html>
